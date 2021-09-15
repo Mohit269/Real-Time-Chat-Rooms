@@ -11,7 +11,7 @@ const socket = io();
 socket.emit('joinRoom',{username,room});
 socket.on('roomuser', ({ room, users }) => {
     outputRoomName(room);
-    outputUsers(users);
+
   });
 socket.on("message",function(message){
     console.log(message);
@@ -36,14 +36,6 @@ function outputmessage(message){
 function outputRoomName(room) {
     roomName.innerText = room
   };
-function outputUsers(users) {
-    userList.innerHTML = '';
-    users.forEach((user) => {
-      const li = document.createElement('li');
-      li.innerText = user.username;
-      userList.appendChild(li);
-    });
-  }
   document.getElementById('leave-btn').addEventListener('click', () => {
     const leaveRoom = confirm('Are you sure you want to leave the chatroom?');
     if (leaveRoom) {
