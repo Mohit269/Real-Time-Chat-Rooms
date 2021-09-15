@@ -9,6 +9,9 @@
   },
   "author": "Mohit Sharma",
   "license": "MIT",
+  "repository":{
+    "type": "git"
+  },
   "dependencies": {
     "express": "^4.17.1",
     "moment": "^2.29.1",
