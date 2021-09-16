@@ -34,6 +34,6 @@ io.on("connection",function(socket){
         };
     });
 });
-server.listen(3000||process.env.PORT,function(){
+server.listen(process.env.PORT,function(){
     console.log("Server is Running Fine");
 });
